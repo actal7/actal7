@@ -1,0 +1,752 @@
+/* GENERAL PAGE PROPERTIES */
+:root {
+    font-size: 0.625rem;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 1.6rem;
+    color:white;
+}
+
+html {
+    display: flex;
+    flex-direction: column;;
+}
+
+/* --- POSITIONING THE NAV  AND STYLING NAV BUTTONS--- */
+
+.navbar {
+    width: 100%;
+    min-height: 7rem;
+
+    padding-top: 0.5rem;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-title {
+    display: none;
+}
+
+.nav-body {
+    width:100%;
+    max-width: 130rem;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    margin: 0.2rem;
+    border-radius: 3rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 450;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-search-btn {
+    margin-left: 30%;
+    background-color: #fff;
+    padding: 1.2rem 5rem;
+}
+.nav-search-btn:hover {
+cursor: pointer;
+}
+
+.nav-lang-btn {
+    margin-left: auto;
+    padding: 1rem 1rem;
+    background-color: #000;
+    color: white;
+}
+
+.nav-lang-btn:hover {
+    background-color: #262626;
+    cursor: pointer;
+}
+
+.lang-icon {
+    font-size: 1.7rem;
+    color: white;
+}
+
+.nav-help-btn {
+    padding: 1rem 1rem;
+    background-color: #000;
+    color: white;
+}
+
+.nav-help-btn:hover {
+    background-color: #262626;
+    cursor: pointer;
+}
+
+.nav-signup-btn {
+    padding: 1.2rem 1.3rem;
+    background-color: white;
+}
+.nav-signup-btn {
+    cursor: pointer;
+}
+
+
+.search-icon {
+    color: rgb(255, 56, 92);
+}
+
+
+
+/* --- POSITIONING THE HEADER --- */
+
+header {
+    background-color: black;
+    width: 100vw;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.main-presentation {
+    width:100%;
+    max-width: 120rem;
+    min-height: 20vh;
+    height: 75vh;
+    margin: 0 4rem;
+    overflow: hidden;
+    background-color: black;
+    /* border: 2px solid orange; */
+}
+
+/* --- POSITIONING THE MAIN PRESENTATION CONTAINER ITEMS */
+
+.main-presentation {
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "pic pic pic pic pic pic pic pic pic pic"
+                         "pic pic pic pic pic pic pic pic pic pic"
+                         "sum1 sum1 sum1 sum2 sum2 sum2 sum2 sum2 sum2 sum2"
+}
+
+.course-pictures{
+    /* border: 2px solid orange; */
+    height: 45vh;
+    grid-area: pic;
+    display: grid;
+    gap: 0.7rem;
+    grid-template-columns: repeat(2, 2fr) 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.share-btn {
+    font-size: 1.4rem;
+    height: 3.5rem;
+    width: 10rem;
+
+    z-index: 1;
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+
+    background-color: #fff;
+    border-color: transparent;
+    color: rgb(72, 72, 72);
+    border-radius: 0.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-btn {
+    font-size: 1.4rem;
+    height: 3.5rem;
+    width: 10rem;
+    z-index: 1;
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+
+    background-color: #fff;
+    border-color: transparent;
+    color: rgb(72, 72, 72);
+    border-radius: 0.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+}
+
+.img4 .picture-buttons {
+    display: flex;
+    position: relative;
+    top: 1rem;
+    left: 10rem;
+
+}
+
+.share-btn svg {
+    margin-right: 1rem;
+}
+
+.save-btn svg {
+    margin-right: 1rem;
+}
+
+.course-pictures video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-column: 1/ span 1;
+    grid-row: 1 / span 2;
+}
+
+
+.course-pictures .img1 {
+    width: 100%;
+    height: auto;
+    background-image: url(img/presentation-1.webp);
+    background-size: cover;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.course-pictures .img2 {
+    width: 100%;
+    height: auto;
+    background-image: url(img/presentation-2.webp);
+    background-size: cover;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.course-pictures .img3 {
+    width: 100%;
+    height: auto;
+    background-image: url(img/presentation-3.webp);
+    background-size: cover;
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.course-pictures .img4 {
+    width: 100%;
+    height: auto;
+    background-image: url(img/presentation-4.webp);
+    background-size: cover;
+    object-fit: cover;
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+}
+
+/* COURSE SUMMARY 1 POSITIONING AND STYLE */
+.course-sum-1 {
+    grid-area: sum1;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-sum-1 > span {
+    margin-bottom: 1.2rem;
+}
+
+.course-sum-1 .sum-online-experience{
+    width: 14rem;
+    padding: 0.2rem 0.3rem;
+    padding-left: 0.1rem;
+    padding-right: 0.4rem;
+    font-size: 1.3rem;
+    color: black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.course-sum-1 .sum-course-title {
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+}
+
+.course-sum-1 .sum-course-location:hover {
+    text-decoration: underline;
+}
+
+.course-sum-1 .sum-online-experience .material-icons {
+    font-size: 1.5rem;
+}
+
+.course-sum-1 .sum-course-rating .bolded-rating {
+    font-weight: 700;
+}
+
+.course-sum-1 .sum-course-rating .material-icons {
+    font-size: 1.3rem;
+}
+
+.course-sum-1 .sum-course-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sum-tag {
+    padding: 0.5rem 0.6rem;
+    font-size: 1.1rem;
+    margin: 0 0.7rem 0.7rem 0;
+    color: white;
+    background-color: #262626;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.sum-tag:hover {
+    text-decoration: underline;
+}
+
+/* COURSE SUMMARY 2 POSITIONING AND STYLE */
+
+.course-sum-2 {
+    grid-area: sum2;
+    margin-left: 4rem;
+}
+
+.booking-call {
+    display: flex;
+    align-items: center;
+    width:100%;
+    max-width: 55rem;
+    padding: 1.6rem 0;
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #262626;
+}
+
+.booking-call svg {
+    margin-right: 1rem;
+}
+
+.booking-details {
+    display: flex;
+    font-size: 1.4rem;
+}
+
+.booking-detail {
+    display: flex;
+    flex-direction: column;
+    margin-right: 6rem;
+}
+
+.booking-detail .material-icons{
+    font-size: 1.6rem;
+    color: rgb(161, 161, 161);
+    margin-bottom: 1rem;
+}
+
+.booking-detail span {
+    color:rgb(161, 161, 161);
+}
+
+/* POS AND STYLE LONG DESCRIPTION */
+
+.content {
+    font-size: 1.8rem; 
+    color: #484848;
+    font-weight: 400;
+}
+
+.main-chunk {
+    color:black;
+    padding: 0 7%;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    color: #484848;
+}
+
+.ld-wrap {
+    width: 120rem;
+    display: flex;
+}
+
+h2 {
+    position: sticky;
+    top: 0px;
+    height: 10vh;
+    width: 50rem;
+    max-width: 45vw;
+    font-size: 3.2rem;
+    padding-top: 3rem;
+    padding-right: 5rem;
+}
+
+p {
+    letter-spacing: 0.1rem;
+    padding-top: 3rem;
+}
+
+
+/* POSITIONING CALL-TO-ACT SECTION */
+
+.call-to-act {
+    background-color: #F2F2F2;
+    border-top: #e6e6e6;
+    border-bottom: #e6e6e6;
+}
+
+/* POSITIONING HOST SECTION */
+
+.host-details img {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 100%;
+}
+
+.host-details h3 {
+    margin-bottom: 0;
+}
+
+.host-details p:first-of-type {
+    padding-top: 0;
+}
+
+.host-details button {
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 800;
+    border-width: 0.2rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+    background: transparent;
+    border-color: #008489;
+    color: #008489;
+    font-family: 'Roboto', sans-serif;
+    border-style: solid;
+}
+
+/* WHAT TO BRING SECTION */
+
+.requirements p {
+    padding-bottom: 2.5rem;
+    margin: 0;
+    padding: 3rem 0;
+    border-bottom: 1px solid #EBEBEB;
+    display: flex;
+}
+
+.requirements svg {
+    padding-right: 2rem;
+    height: 5rem !important;
+    width: 5rem !important;
+}
+
+/* POSITIONING AND STYLING BOTTOM FIXED CALL TO ACTION */
+.call-to-act-bar {
+    height: 7rem;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    padding: 0 4rem;
+    color: black;
+    font-size: 1.6rem;
+    background-color: #fff;
+    border-top: 1px solid rgb(228, 228, 228);
+    box-shadow: 0px -3px 2px 4px rgb(208, 209, 203, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.call-to-act-bar .wrapper {
+    width:100%;
+    max-width: 125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.call-to-act-bar .wrap-present {
+    display: flex;
+    align-items: center;
+}
+
+
+.call-to-act-bar .wrap-present .rating {
+    display: flex;
+    align-items: center;
+    color: #008489;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.call-to-act-bar img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+}
+
+.call-to-act-bar span {
+    margin-left: 0.4rem;
+}
+
+.call-to-act-bar .course-title {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(72, 72, 72);
+}
+
+.call-to-act-bar .star {
+    font-size: 1.6rem;
+}
+
+.call-to-act-bar .total-people {
+    color: rgb(118, 118, 118);
+    font-size: 1.2rem;
+}
+
+/* CALL TO ACTION PURCHASE BUTTON */
+
+.call-to-act-bar .wrap-purchase {
+    display: flex;
+    align-items: center;
+    margin-right: 8rem;
+}
+
+.call-to-act-bar .wrap-purchase .price-tag {
+    font-size: 1.6rem;
+    margin-right: 1.2rem;
+    color: rgb(72, 72, 72);
+    font-weight: 800;
+}
+
+.call-to-act-bar .wrap-purchase .purchase-btn {
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    padding: 1rem 6rem;
+    border-width: 0.2rem;
+    border-color: transparent;
+    color: #fff;
+    letter-spacing: 0.05rem;
+    background-color: #FF5A5f;
+}
+
+@media only screen and (max-width: 1250px) {
+    .nav-body {
+        width:100%;
+        max-width: 100rem;
+        display: flex;
+        bottom: 0;
+        
+    }
+
+    .img4 .picture-buttons {
+        left: 6rem;
+    
+    }
+}
+
+@media only screen 
+and (max-width : 1040px) 
+{
+    .nav-body {
+        width:100%;
+        max-width: 70rem;
+        display: flex;
+        bottom: 0;
+    }
+
+    .airbnb-logo {
+        width: 14rem;
+    }
+
+    header {
+        background-color: black;
+        width: 96vw;
+        min-height: 100vh;
+    }
+
+    .main-presentation {
+        min-width: 100%;
+        margin: 5rem;
+        background-color: black;
+
+    }
+
+    .course-pictures{
+        height: 25vh;
+        width: 90vw;
+        margin-left: 5vw;
+    }
+
+    .share-btn {
+        display: none;
+    }
+
+    .save-btn {
+        display: none;
+    }
+
+}
+
+@media only screen 
+and (max-width : 600px)
+ {
+    html {
+        
+
+    }
+
+    .navbar {
+        width: 100%;
+        min-height: 7rem;
+        max-height: 10vh;
+        background-color:white;
+    }
+
+    header {
+        background-color: black;
+        width: 100vw;
+        min-height: 100vh;
+
+    }
+    
+    .main-presentation {
+        min-width: 20vw;
+        margin: 2rem;
+        height: 100vh;
+        padding: 0;
+        background-color: black;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 3fr ;
+        grid-template-areas: "pic"
+                             "sum1"
+                             "sum2";
+    }
+
+    .course-pictures{
+        height: 15vh;
+        width: 85vw;
+        margin: 0 auto;
+    }
+
+    .airbnb-logo {
+        display: none;
+        width: 0rem;
+    }
+
+    .call-to-act-bar .wrapper {
+        width: 100%;
+    }
+
+    .call-to-act-bar .wrap-present {
+        display: none;
+    }
+
+    .call-to-act-bar .wrap-purchase .purchase-btn {
+
+        font-size: 1.6rem;
+
+        padding: 1rem 2rem;
+        border-width: 0.2rem;
+        border-color: transparent;
+        color: #fff;
+        letter-spacing: 0.05rem;
+        background-color: #FF5A5f;
+    }
+
+    .nav-lang-btn,
+    .nav-help-btn,
+    .nav-signup-btn, 
+    .nav-search-btn {
+        display: none;
+    }
+
+    .sum-online-experience {
+        margin-top: 2rem;
+    }
+
+    .course-sum-1 {
+        height: 20vh;
+    }
+    
+    .booking-call {
+        padding-top: 0;
+    }
+    .course-sum-2 {
+        margin-left: 0;
+    }
+
+    .call-to-act-bar .wrapper {
+        justify-content: space-between;
+    }
+
+    .call-to-act-bar {
+        padding:0;
+    }
+    .call-to-act-bar .wrap-purchase {
+        margin-right: 1rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .wrap-purchase {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .purchase-btn {
+        width: 16rem;
+    }
+
+    .mobile-title {
+        width: 100%;
+        color: #000;
+        display: inline-block;
+        margin-left: 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-title svg {
+        margin-left: 5vw;
+        color: #484848;
+        height: 4rem;
+        width: 2rem;
+    }
+
+    .mobile-title .saver {
+        margin-left: 14vw;
+    }
+
+    .ld-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+        position: static;
+    }
+}
